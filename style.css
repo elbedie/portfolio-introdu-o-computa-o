@@ -1,0 +1,578 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Archivo+Black&family=Playwrite+CU:wght@100..400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth; /* Efeito de rolagem suave para âncoras */
+}
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #c5c5c5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2cb67d;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #33cf8e;
+}
+
+
+body {
+  position: relative;
+  overflow-x: hidden; /* Esconde a rolagem horizontal, permite a rolagem vertical */
+  background-image: linear-gradient(rgba(54, 54, 54, 0.6), rgba(0, 0, 0, 0.99)), url('img/programming-1873854_1280.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100%;
+  color: #464646; /* Cor padrão do texto */
+  
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Ajuste a cor e a opacidade conforme necessário */
+  z-index: -1; /* Garante que a sobreposição esteja atrás do conteúdo */
+}
+
+/* Header */
+header {
+  background-color: transparent;
+  width: 100%;
+  height: auto; /* Ajusta a altura ao conteúdo */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: all 0.3s ease-in-out; /* Transição suave */
+}
+
+/* Logo */
+.logo {
+  color: #2cb67d;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1) rotate(3deg); /* Efeito de rotação leve */
+}
+
+/* Navegação */
+nav {
+  background-color: transparent;
+  list-style-type: none;
+  color: #fffffe;
+  display: flex;
+  gap: 20px;
+  padding-right: 20px;
+}
+
+nav a:link, nav a:visited {
+  color: #fffffe;
+  text-decoration: none;
+  font-size: 16px;
+  padding-bottom: 5px;
+  transition: color 0.3s, border-bottom 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+  color: #2cb67d;
+  border-bottom: 2px solid #2cb67d;
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #2cb67d;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover::before {
+  visibility: visible;
+  width: 100%;
+}
+
+.infos-container-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textos-container-principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.textos-container-principal .saudacao-container-principal1 {
+  margin-left: 25px;
+}
+
+.container-principal {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  margin-top: 20px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.saudacao-container-principal1, .saudacao-container-principal {
+  color: #2cb67d;
+  display: flex;
+  position: relative;
+  font-size: 20px;
+  letter-spacing: 10px;
+}
+
+.saudacao-container-principal1 {
+  letter-spacing: normal;
+}
+
+.nome-container-principal {
+  font-size: 60px;
+  font-family: 'Archivo Black', sans-serif;
+  background: linear-gradient(90deg, #72757e, #2cb67d, #9df05a);
+  background-size: 300%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: gradientShift 3s ease-in-out infinite;
+  animation: bounce-in-top 1.1s both;
+}
+
+@keyframes bounce-in-top {
+  0% {
+    transform: translateY(-500px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: translateY(-65px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateY(-28px);
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: translateY(-8px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.resumo-container-principal {
+  width: 50%;
+  text-align: center;
+  color: #c3c4c5;
+}
+
+p {
+  font-size: 15px;
+  text-align: center;
+}
+
+.social-icons a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  border: 0.15rem solid #2cb67d;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  margin: 2rem 1rem;
+  transition: 0.3s ease;
+  color: #fffffe;
+}
+
+.social-icons a:hover, .social-contact a:hover {
+  color: #fffffe;
+  background: linear-gradient(90deg, #72757e, #2cb67d, #9df05a);
+  box-shadow: 0 0 10px #c3c4c5;
+  transform: scale(1.2) translateY(-5px);
+}
+
+/* Download CV */
+.type1, .type2 {
+  height: 50px;
+  width: 200px;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #2cb67d;
+  overflow: hidden;
+  border-radius: 30px;
+  color: #fffffe;
+  transition: all 0.5s ease-in-out;
+}
+
+.botoes-container-principal a{
+  text-decoration: none;
+  color: #f1faee;
+}
+
+.botoes-container-principal {
+  display: flex;
+  gap: 10px;
+  flex-direction: row-reverse;
+}
+
+.btn-txt {
+  z-index: 1;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.type1::after, .type2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  border-radius: 30px;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+  background: linear-gradient(90deg, #72757e, #2cb67d, #9df05a);
+  border: 2px solid #fffffe;
+}
+
+.type1:hover, .type2:hover {
+  background: linear-gradient(90deg, #72757e, #2cb67d, #9df05a);
+  color: #fffffe;
+  border: 2px solid #fffffe;
+}
+
+.type1:hover::after, .type2:hover::after {
+  visibility: visible;
+  transform: scale(100) translateX(2px);
+}
+
+.container-about-me {
+  display: flex;
+  background-image: radial-gradient(circle, #16161a, #18181b, #1b1a1c, #1d1d1e, #1f1f1f);
+  height: 100vh; /* O container ocupará toda a altura da página */
+  position: relative;
+}
+
+.quadrado-container-about-me {
+  position: absolute;
+  background-color: white;
+  left: 13%;
+  top: 25%;
+  padding: 0; /* Remover padding para evitar o crescimento do quadrado */
+  width: 250px; /* Define um tamanho fixo para o quadrado */
+  height: 250px; /* Define um tamanho fixo para o quadrado */
+  overflow: hidden; /* Garante que a imagem não ultrapasse os limites do quadrado */
+  clip-path: circle(50% at 50% 50%);
+  
+}
+
+.img-quadrado img {
+  max-width: 100%; /* A imagem não ultrapassará a largura do quadrado */
+  max-height: 100%; /* A imagem não ultrapassará a altura do quadrado */
+  object-fit: cover; /* Ajusta a imagem para cobrir o quadrado sem distorção */
+  display: block; /* Remove espaçamentos indesejados ao redor da imagem */
+  object-position: 50% -20px;
+}
+
+
+.primeira-parte-container-about-me {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 100%;
+  justify-content: center;
+  background-color: #2cb67d;
+  position: relative;
+}
+
+.titulo-container-about-me {
+  color: #fffffe;
+  padding-top: 0;
+  font-size: 55px;
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-bottom: 5px solid #2cb67d; /* Adiciona um detalhe de destaque */
+}
+
+.texto-container-about-me h1{
+  color:#f1faee;
+  font-size: 35px;
+  font-family:'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-bottom: 2px solid #2cb67d; /* Adiciona um detalhe de destaque */
+  text-align: center;
+}
+
+.texto-container-about-me {
+  color: #f1faee;
+  padding-top: 10px;
+  font-size: 22px;
+  margin-left: 200px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6; /* Melhor leitura do texto */
+  width: 550px;
+}
+
+.texto-container-about-me p{
+  text-align: left;
+}
+
+.texto-container-about-me img{
+  position: absolute;
+  right: 3px;
+  top: 35px;
+  
+}
+
+
+.segunda-parte-container-about-me {
+  display: flex;
+  padding-top: 140px;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.icons {
+  font-size: 40px; /* Tamanho dos ícones */
+  margin: 10px; /* Espaçamento entre os ícones */
+  transition: transform 0.3s ease, color 0.3s ease; /* Transição suave para o zoom e cor */
+  padding-left: 120px;
+  word-spacing: 20px;
+}
+
+.icons i:hover {
+  transform: scale(1.2); /* Aumenta o ícone em 20% */
+  color: #2cb67d; /* Muda a cor ao passar o mouse */
+
+  background-color:transparent;
+}
+
+.container-projects {
+  display: flex;
+  flex-direction: column-reverse;
+  background-image: radial-gradient(circle, #16161a, #18181b, #1b1a1c, #1d1d1e, #1f1f1f);
+  height: 100vh; /* O container ocupará toda a altura da página */
+  position: relative;
+}
+
+.primeira-container-projects{
+  background-color: transparent;
+  height: 50%;
+}
+
+.segunda-container-projects{
+  display: flex;
+  height: 50%;
+  flex-direction: row;
+  gap: 10px;
+}
+
+
+
+.project-circle1, .project-circle2, .project-circle3, .project-circle4 {
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  padding: 0;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%; /* Garante que o círculo seja perfeito */
+  background: linear-gradient(to bottom, #16161a 50%, #2cb67d 50%); /* Inverte as cores */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  
+  
+}
+
+.project-circle1:hover, .project-circle2:hover, .project-circle3:hover, .project-circle4:hover {
+  transform: scale(1.1); /* Aumenta levemente o tamanho no hover */
+  box-shadow: 0 0 20px rgba(80, 214, 158, 0.836), 0 0 40px rgba(44, 182, 125, 0.4); /* Adiciona um brilho */
+}
+
+.project-circle2{
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+
+.project-circle3{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+
+.project-circle4{
+  position: absolute;
+  top: 30%;
+  left: 70%;
+}
+
+.project-circle1 img, .project-circle2 img, .project-circle3 img, .project-circle4 img {
+  position: absolute; /* Garante que a imagem preencha o contêiner completamente */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* A imagem preencherá o círculo sem distorção */
+  display: block;
+}
+
+.titulo-projeto{
+  color: #2cb67d;
+  font-size: 30px;
+  margin-top: 90px;
+  padding-left: 195px;
+  display: flex;
+  gap: 140px;
+}
+
+.titulos-projeto{
+  font-family: 'Archivo Black', sans-serif;
+}
+
+.segunda-container-projects h1{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 30px;
+  color: #2cb67d;
+  font-size: 55px;
+  font-family: 'Archivo Black', sans-serif;
+  border-bottom: 1px solid #f1faee;
+}
+
+.container-contact{
+  width: 100%;
+  height: 100vh;
+}
+
+.contact{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f1faee;
+}
+
+.contact h1{
+  border-bottom: 1px solid #2cb67d;
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.social-contact a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: 0.15rem solid #2cb67d;
+  font-size: 1rem;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  color: #fffffe;
+}
+
+.social-contact{
+  font-family: 'Archivo Black', sans-serif;
+}
+
+.contact-one, .contact-two{
+  display: flex;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.social-contact h2{
+  font-size: 15px;
+  font-family:Arial, Helvetica, sans-serif;
+  margin-top: 5px;
+}
+
+.contact iframe {
+  width: 25%;
+  height: 25%;
+  border: 3px solid #464646; /* Cor cinza escura */
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); /* Sombra para efeito de profundidade */
+  margin: 20px auto;
+  display: block;
+}
+
+.container-contact p{
+  border-bottom: 1px solid #2cb67d;
+}
