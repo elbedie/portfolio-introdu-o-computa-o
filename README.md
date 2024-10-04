@@ -2,15 +2,8 @@
 
 Bem-vindo ao meu portfólio! Este projeto foi desenvolvido como parte da disciplina de **Introdução à Computação** na **Cesar School**. 🎓 Aqui, você vai encontrar um pouco sobre mim, meus hobbies, e as habilidades que estou desenvolvendo ao longo do curso. 💻✨
 
-## 🔍 Sobre Mim
-
-Sou Diego, um estudante apaixonado por tecnologia e programação. 💡 No meu tempo livre, gosto de:
-
-- 📚 Ler livros
-- 🚲 Andar de bicicleta
-- 🎧 Ouvir música
-- 🎬 Assistir filmes e séries
-- 🎮 Jogar videogame
+## 🎬 Acesse o projeto: 
+https://elbedie.github.io/portfolio-introdu-o-computacao/
 
 ## 💻 Tecnologias
 
